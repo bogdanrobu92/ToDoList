@@ -1,0 +1,9 @@
+ul {
+    list-style: square outside url(https://cdn.bitdegree.org/learn/list-style-image-marker-1.png?426d93cd);
+}
+
+
+/* 
+.done {
+    text-decoration: line-through;
+} */
