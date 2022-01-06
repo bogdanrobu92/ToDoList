@@ -51,17 +51,20 @@ input.addEventListener("keypress", addListAfterKeypress);
 
 
 //MARKING AS DONE (line-thorugh)
+// Inspired by https://github.com/drood87/shoppingList
 
 //Mark as done function
 
-function markAsDone(e) {
-    if (e.target.tagName === "LI") {
-        e.target.classList.toggle("Done");
+function markAsDone(evt) {
+    if (evt.target.tagName === "LI") {
+        evt.target.classList.toggle("Done");
     }
 }
 
+
 //Mark as done listener
-ul.addEventListener("click", markAsDone)
+ul.addEventListener("click", markAsDone);
+
 
 
 //CLEARING ENTIRE LIST
