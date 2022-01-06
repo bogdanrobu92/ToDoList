@@ -25,6 +25,7 @@ header {
 
 .Done {
     text-decoration: line-through;
+    color: red;
 }
 
 li {
