@@ -13,8 +13,10 @@ html {
     font-size: 2rem;
 }
 
-#enter,
-#clear {}
+h1 {
+    font-size: 0.2rem;
+}
+
 
 header {
     text-transform: uppercase;
