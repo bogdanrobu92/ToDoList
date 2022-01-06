@@ -1,9 +1,13 @@
 // Store elements in variables 
 
 var button = document.getElementById("enter");
+var clear = document.getElementById("clear");
 var input = document.getElementById("userinput");
 var ul = document.querySelector("ul");
+var li = document.getElementsByTagName("li");
 
+
+//CREATING NEW ITEM IN LIST
 
 // Check if the input is not empty
 
@@ -11,11 +15,7 @@ function inputLength() {
     return input.value.length;
 }
 
-
 //Create new item and restore input to default
-// MAYBE I CAN ADD and random ID for each element 
-//AND COMPARE THE ID WITH an i so i can turn class done on only for that i
-// with .setAtribute("id") and a function that assigns a random number only once
 function createListElement() {
     var li = document.createElement("li");
     li.appendChild(document.createTextNode(input.value));
@@ -23,7 +23,9 @@ function createListElement() {
     input.value = "";
 }
 
-// Add item after click
+// ADDING ITEMS AFTER CLICK
+
+// Add item after click function
 
 function addListAfterClick() {
     if (inputLength() > 0) {
@@ -31,23 +33,43 @@ function addListAfterClick() {
     }
 }
 
-// Add item after Enter
+//Add item after click listner 
+button.addEventListener("click", addListAfterClick);
 
+
+//ADDING ITEMS AFTER ENTER
+
+// Add item after Enter Function
 function addListAfterKeypress(event) {
     if (inputLength() > 0 && event.keyCode === 13) {
         createListElement();
     }
 }
-// Mark item as done
-function turnDoneOn() {
-    ul.classList.toggle("done");
-}
 
-//listen to click on button
-button.addEventListener("click", addListAfterClick);
-
-//listen to Enter Press
+//Add item after enter Listener 
 input.addEventListener("keypress", addListAfterKeypress);
 
-//liste to click on list item
-ul.addEventListener("click", turnDoneOn)
+
+//MARKING AS DONE (line-thorugh)
+
+//Mark as done function
+
+function markAsDone(e) {
+    if (e.target.tagName === "LI") {
+        e.target.classList.toggle("Done");
+    }
+}
+
+//Mark as done listener
+ul.addEventListener("click", markAsDone)
+
+
+//CLEARING ENTIRE LIST
+
+//Clear Entire list function
+function clearList() {
+    ul.innerHTML = "";
+}
+
+//Clear entire list listner
+clear.addEventListener("click", clearList);

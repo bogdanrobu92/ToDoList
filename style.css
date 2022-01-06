@@ -1,9 +1,27 @@
-ul {
-    list-style: square outside url(https://cdn.bitdegree.org/learn/list-style-image-marker-1.png?426d93cd);
+html {
+    background: url(https://i.pinimg.com/originals/ca/68/73/ca6873339d2734623797a3e03e20b06f.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-/* 
-.done {
+header {
+    text-transform: uppercase;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.upbar {
+    text-transform: capitalize;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.Done {
     text-decoration: line-through;
-} */
+}
