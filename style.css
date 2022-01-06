@@ -10,6 +10,7 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    font-size: 2rem;
 }
 
 header {
@@ -24,4 +25,8 @@ header {
 
 .Done {
     text-decoration: line-through;
+}
+
+li {
+    font-size: 2rem;
 }
