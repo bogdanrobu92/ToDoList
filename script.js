@@ -95,7 +95,7 @@ function deleteCheck(e) {
     if (item.classList[0] === "completeBtn") {
         var toDoLi = item.parentElement.childNodes;
         var toDoAll = item.parentElement;
-        toDoLi[0].classList.add("done");
+        toDoLi[0].classList.toggle("done");
         toDoAll.classList.toggle("done2");
 
     }
