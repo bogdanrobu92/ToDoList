@@ -107,6 +107,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 1s ease;
 }
 
 .todo li {
@@ -119,4 +120,41 @@ header {
 
 .done2 {
     opacity: 0.5;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-animation: none;
+    -appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select {
+    color: linear-gradient(to right, rgb(96, 108, 136) 0%, rgb(63, 76, 107) 51%, rgb(96, 108, 136) 100%);
+    width: 10rem;
+    cursor: pointer;
+    padding: 1.5rem;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background: #accbee;
+    top: 0;
+    right: 0;
+    padding: 1.5rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after {
+    background: rgb(255, 255, 255);
+    color: #010810;
 }
