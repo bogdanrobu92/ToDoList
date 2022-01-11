@@ -3,27 +3,34 @@
 
 <head>
     <title>My to do list</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-    <div class=wrapper>
-        <header>
-            <h1>To Do List</h1>
-            <p id="first">Get it done today</p>
-        </header>
-        <div class="upbar">
-            <input id="userinput" type="text" placeholder="Enter items">
-            <button class="blue" id="enter">Enter</button>
-            <button class="red" id="clear">Clear</button>
-        </div>
-        <div class="List">
-            <ul>
-
-            </ul>
-        </div>
+    <!-- Header -->
+    <header>
+        <h1>To Do List</h1>
+        <p id="first">Get it done today</p>
+    </header>
+    <!-- From and buttons -->
+    <div class="form">
+        <input id="userinput" type="text" placeholder="Enter items">
+        <button class="fas fa-plus-square" id="enter"></button>
+        <button class="fas fa-trash-alt" id="clear"></button>
     </div>
+    <!-- List -->
+    <div class="List">
+        <ul class="toDoList">
+        </ul>
+    </div>
+
     <script type="text/javascript" src="script.js"></script>
+    <script src="https://kit.fontawesome.com/8125e3adf6.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
+
+<h
